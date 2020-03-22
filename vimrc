@@ -25,33 +25,41 @@ Plugin 'kien/ctrlp.vim'
 
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
-Plugin 'preservim/nerdcommenter'
+"Plugin 'preservim/nerdcommenter'
 
 Plugin 'preservim/nerdtree'
 
-Plugin 'davidhalter/jedi-vim'
+" Plugin 'davidhalter/jedi-vim'
 
 Plugin 'tpope/vim-commentary'
-
-Plugin 'ncm2/ncm2'
-Plugin 'roxma/nvim-yarp'
-
-" NOTE: you need to install completion sources to get completions. Check
-" our wiki page for a list of sources: https://github.com/ncm2/ncm2/wiki
-Plugin 'ncm2/ncm2-bufword'
-Plugin 'ncm2/ncm2-path'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+"NCM2 Attempted install
+"Plugin 'ncm2/ncm2'
+"Plugin 'roxma/nvim-yarp'
+
+" Plugin 'ncm2/ncm2-jedi'
+
 " enable ncm2 for all buffers
-" autocmd BufEnter * call ncm2#enable_for_buffer()
+"autocmd BufEnter * call ncm2#enable_for_buffer()
 
 " IMPORTANT: :help Ncm2PopupOpen for more information
-set completeopt=noinsert,menuone,noselect
+"set completeopt=noinsert,menuone,noselect
 
-"commentary in the middle"
+"call vundle#begin()
+"" NOTE: you need to install completion sources to get completions. Check
+"" our wiki page for a list of sources: https://github.com/ncm2/ncm2/wiki
+"Plugin 'ncm2/ncm2-bufword'
+"Plugin 'ncm2/ncm2-path'
+
+"call vundle#end()
+
+
+
+
 
 "split navigations
 nnoremap <C-J> <C-W><C-H>
