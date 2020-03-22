@@ -36,12 +36,6 @@ Plugin 'tpope/vim-commentary'
 Plugin 'ncm2/ncm2'
 Plugin 'roxma/nvim-yarp'
 
-" enable ncm2 for all buffers
-autocmd BufEnter * call ncm2#enable_for_buffer()
-
-" IMPORTANT: :help Ncm2PopupOpen for more information
-set completeopt=noinsert,menuone,noselect
-
 " NOTE: you need to install completion sources to get completions. Check
 " our wiki page for a list of sources: https://github.com/ncm2/ncm2/wiki
 Plugin 'ncm2/ncm2-bufword'
@@ -50,6 +44,12 @@ Plugin 'ncm2/ncm2-path'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+" enable ncm2 for all buffers
+" autocmd BufEnter * call ncm2#enable_for_buffer()
+
+" IMPORTANT: :help Ncm2PopupOpen for more information
+set completeopt=noinsert,menuone,noselect
 
 "commentary in the middle"
 
