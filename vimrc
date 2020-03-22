@@ -100,3 +100,7 @@ nnoremap <C-Right> :tabnext<CR>
 "Proper backspace
 set backspace=indent,eol,start
 
+" let g:jedi#use_tabs_not_buffers = 1
+let g:jedi#use_splits_not_buffers = "right"
+
+let mapleader=" "
