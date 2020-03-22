@@ -27,6 +27,8 @@ Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 Plugin 'preservim/nerdcommenter'
 
+Plugin 'preservim/nerdtree'
+
 Plugin 'davidhalter/jedi-vim'
 
 Plugin 'tpope/vim-commentary'
