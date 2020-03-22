@@ -33,8 +33,8 @@ filetype plugin indent on    " required
 "commentary in the middle"
 
 "split navigations
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
+nnoremap <C-J> <C-W><C-H>
+nnoremap <C-K> <C-W><C-L>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
@@ -42,17 +42,17 @@ nnoremap <C-H> <C-W><C-H>
 :set number
 
 "Python indentation
-au BufNewFile,BufRead *.py
-    \ set tabstop=4
-    \ set softtabstop=4
-    \ set shiftwidth=4
-    \ set textwidth=79
-    \ set expandtab
-    \ set autoindent
-    \ set fileformat=unix
+"autocmd BufNewFile,BufRead *.py
+"    \ set tabstop=4
+"    \ set softtabstop=4
+"    \ set shiftwidth=4
+"    \ set textwidth=79
+"    \ set expandtab
+"    \ set autoindent
+"    \ set fileformat=unix
 
 "Underline bad whitespace Python
-au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+"au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 set encoding=utf-8
 
@@ -73,3 +73,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 nnoremap <C-Left> :tabprevious<CR>
 nnoremap <C-Right> :tabnext<CR>
+
+"Proper backspace
+set backspace=indent,eol,start
+
