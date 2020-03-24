@@ -33,9 +33,14 @@ Plugin 'preservim/nerdtree'
 
 Plugin 'tpope/vim-commentary'
 
+Plugin 'ervandew/supertab'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
 
 "NCM2 Attempted install
 "Plugin 'ncm2/ncm2'

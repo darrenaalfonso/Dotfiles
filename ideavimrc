@@ -1,0 +1,15 @@
+"Press jk at same time to escape insert mode
+inoremap jk <esc>
+inoremap kj <esc>
+vnoremap kj <esc>
+vnoremap jk <esc> 
+
+"split navigations
+nnoremap <C-J> <C-W><C-H>
+nnoremap <C-K> <C-W><C-L>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+"
+nmap <S-Enter> O<Esc>
+nmap <CR> o<Esc>
