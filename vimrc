@@ -117,3 +117,5 @@ set backspace=indent,eol,start
 let g:jedi#use_splits_not_buffers = "right"
 
 let mapleader=" "
+
+:set viminfo='1000,f1
