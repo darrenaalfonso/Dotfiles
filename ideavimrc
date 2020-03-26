@@ -15,3 +15,6 @@ nmap <S-Enter> O<Esc>
 nmap <CR> o<Esc>
 
 :set viminfo='1000,f1
+
+let mapleader=" "
+set easymotion
