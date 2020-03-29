@@ -36,6 +36,11 @@ Plugin 'tpope/vim-commentary'
 Plugin 'ervandew/supertab'
 
 Plugin 'easymotion/vim-easymotion'
+
+Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plugin 'junegunn/fzf.vim'
+
+Plugin 'ddrscott/vim-side-search'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -75,6 +80,7 @@ nnoremap <C-H> <C-W><C-H>
 
 "always show line numbers
 :set number
+:set relativenumber
 
 "Python indentation
 "autocmd BufNewFile,BufRead *.py
