@@ -25,12 +25,9 @@ Plugin 'kien/ctrlp.vim'
 
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
-"Plugin 'preservim/nerdcommenter'
-
 Plugin 'preservim/nerdtree'
 
-" Plugin 'davidhalter/jedi-vim'
-
+" 'gc' to comment/uncomment
 Plugin 'tpope/vim-commentary'
 
 Plugin 'ervandew/supertab'
@@ -40,37 +37,18 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'
 
+" :SideSearch to search
 Plugin 'ddrscott/vim-side-search'
+
+" pipenv shell to get Django autocomplete
+Plugin 'ycm-core/YouCompleteMe'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
-
-"NCM2 Attempted install
-"Plugin 'ncm2/ncm2'
-"Plugin 'roxma/nvim-yarp'
-
-" Plugin 'ncm2/ncm2-jedi'
-
-" enable ncm2 for all buffers
-"autocmd BufEnter * call ncm2#enable_for_buffer()
-
-" IMPORTANT: :help Ncm2PopupOpen for more information
-"set completeopt=noinsert,menuone,noselect
-
-"call vundle#begin()
-"" NOTE: you need to install completion sources to get completions. Check
-"" our wiki page for a list of sources: https://github.com/ncm2/ncm2/wiki
-"Plugin 'ncm2/ncm2-bufword'
-"Plugin 'ncm2/ncm2-path'
-
-"call vundle#end()
-
-
-
-
 
 "split navigations
 nnoremap <C-J> <C-W><C-H>
@@ -83,17 +61,17 @@ nnoremap <C-H> <C-W><C-H>
 :set relativenumber
 
 "Python indentation
-"autocmd BufNewFile,BufRead *.py
-"    \ set tabstop=4
-"    \ set softtabstop=4
-"    \ set shiftwidth=4
-"    \ set textwidth=79
-"    \ set expandtab
-"    \ set autoindent
-"    \ set fileformat=unix
+autocmd BufNewFile,BufRead *.py
+    \ set tabstop=4
+    \ set softtabstop=4
+    \ set shiftwidth=4
+    \ set textwidth=79
+    \ set expandtab
+    \ set autoindent
+    \ set fileformat=unix
 
 "Underline bad whitespace Python
-"au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 set encoding=utf-8
 
@@ -127,5 +105,9 @@ let mapleader=" "
 
 :set viminfo='1000,f1
 
-:set number relativenumber
+filetype on                 " try to detect filetypes
+filetype plugin indent on   " enable loading indent file for filetype
 
+" Enter adds empty lines
+nmap <S-Enter> O<Esc>
+nmap <CR> o<Esc>

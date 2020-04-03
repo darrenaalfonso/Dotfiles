@@ -1,0 +1,6 @@
+A prevent pinned tabs from closing plugin - by momomo.com
+AceJump
+IdeaVIM
+org.jetbrains.IdeaVim-EasyMotion
+org.vayafulano.relativeLineNumbers
+python-flake8
