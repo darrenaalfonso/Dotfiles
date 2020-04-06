@@ -61,17 +61,17 @@ nnoremap <C-H> <C-W><C-H>
 :set relativenumber
 
 "Python indentation
-autocmd BufNewFile,BufRead *.py
-    \ set tabstop=4
-    \ set softtabstop=4
-    \ set shiftwidth=4
-    \ set textwidth=79
-    \ set expandtab
-    \ set autoindent
-    \ set fileformat=unix
+" autocmd BufNewFile,BufRead *.py
+"     \ set tabstop=4
+"     \ set softtabstop=4
+"     \ set shiftwidth=4
+"     \ set textwidth=79
+"     \ set expandtab
+"     \ set autoindent
+"     \ set fileformat=unix
 
 "Underline bad whitespace Python
-au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+" au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 set encoding=utf-8
 
@@ -111,3 +111,6 @@ filetype plugin indent on   " enable loading indent file for filetype
 " Enter adds empty lines
 nmap <S-Enter> O<Esc>
 nmap <CR> o<Esc>
+
+" YCM Shortcuts
+nnoremap gd :tab split \| YcmCompleter GoToDefinition<CR>
