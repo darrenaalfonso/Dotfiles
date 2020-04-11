@@ -43,6 +43,8 @@ Plugin 'ddrscott/vim-side-search'
 " pipenv shell to get Django autocomplete
 Plugin 'ycm-core/YouCompleteMe'
 
+Plugin 'mileszs/ack.vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -109,8 +111,34 @@ filetype on                 " try to detect filetypes
 filetype plugin indent on   " enable loading indent file for filetype
 
 " Enter adds empty lines
-nmap <S-Enter> O<Esc>
-nmap <CR> o<Esc>
+" nmap <S-Enter> O<Esc>
+" nmap <CR> o<Esc>
 
 " YCM Shortcuts
 nnoremap gd :tab split \| YcmCompleter GoToDefinition<CR>
+
+" SideSearch current word and return to original window
+nnoremap <Leader>ss :SideSearch <C-r><C-w><CR> | wincmd p
+
+" Create an shorter `SS` command
+command! -complete=file -nargs=+ SS execute 'SideSearch <args>'
+
+" or command abbreviation
+cabbrev SS SideSearch
+
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+
+" Switch between tabs quickly
+" Go to tab by number
+noremap <leader>1 1gt
+noremap <leader>2 2gt
+noremap <leader>3 3gt
+noremap <leader>4 4gt
+noremap <leader>5 5gt
+noremap <leader>6 6gt
+noremap <leader>7 7gt
+noremap <leader>8 8gt
+noremap <leader>9 9gt
+noremap <leader>0 :tablast<cr>

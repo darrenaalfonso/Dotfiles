@@ -10,9 +10,9 @@ nnoremap <C-K> <C-W><C-L>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-"
-nmap <S-Enter> O<Esc>
-nmap <CR> o<Esc>
+"Enter and shift enter add blank lines
+"nmap <S-Enter> O<Esc>
+"nmap <CR> o<Esc>
 
 let mapleader=" "
 set easymotion
