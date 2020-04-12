@@ -45,6 +45,8 @@ Plugin 'ycm-core/YouCompleteMe'
 
 Plugin 'mileszs/ack.vim'
 
+Plugin 'hdima/python-syntax'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -53,8 +55,8 @@ filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 
 "split navigations
-nnoremap <C-J> <C-W><C-H>
-nnoremap <C-K> <C-W><C-L>
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
@@ -142,3 +144,18 @@ noremap <leader>7 7gt
 noremap <leader>8 8gt
 noremap <leader>9 9gt
 noremap <leader>0 :tablast<cr>
+
+" Python syntax highlighting
+let python_highlight_all = 1
+
+" Syntastic settings
+let g:syntastic_python_checkers = ['flake8', 'pylint']
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
