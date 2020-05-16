@@ -23,3 +23,9 @@ alias gf="git fetch"
 alias ga="git add"
 alias gco="git commit"
 alias gpo="git push origin"
+
+function listsecrets() {
+    aws ssm get-parameters-by-path --recursive --path $@ \
+        --output table \
+        --query 'Parameters[].[Name,Value]'
+}
