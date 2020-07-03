@@ -1,7 +1,7 @@
 "Press jk at same time to escape insert mode
 inoremap jk <esc>
-inoremap kj <esc>
-vnoremap kj <esc>
+" inoremap kj <esc>
+" vnoremap kj <esc>
 vnoremap jk <esc> 
 
 "Enter and shift enter add blank lines
@@ -24,4 +24,4 @@ noremap <leader>9 9gt
 noremap <leader>0 :tablast<cr>
 
 set easymotion
-
+set surround

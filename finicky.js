@@ -8,6 +8,7 @@ module.exports = {
         "spotify.com",
         /.*\.spotify.com$/,
         "news.ycombinator.com",
+	"youtu.be",
       ]),
       //browser: "Firefox"
       //browser: "Google Chrome Canary"

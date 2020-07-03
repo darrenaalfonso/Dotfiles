@@ -81,8 +81,8 @@ set encoding=utf-8
 
 "Press jk at same time to escape insert mode
 inoremap jk <esc>
-inoremap kj <esc>
-vnoremap kj <esc>
+" inoremap kj <esc>
+" vnoremap kj <esc>
 vnoremap jk <esc> 
 
 "Python syntax highlighting
