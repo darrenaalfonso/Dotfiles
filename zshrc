@@ -130,3 +130,5 @@ bindkey "^[^[[D" backward-word # option/alt + left arrow
 bindkey "^[^[[C" forward-word # option/alt + right arrow
 
 eval "$(direnv hook zsh)"
+
+alias gdto="git difftool"
