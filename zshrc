@@ -122,7 +122,13 @@ function zoomoff() {
     sudo pmset -b disablesleep 0
 }
 
+function resetaudio() {
+    sudo kill -9 `ps ax | grep 'coreaudio[a-z]' | awk '{print $1}'`
+}
+
 bindkey "^[^[[D" backward-word # option/alt + left arrow 
 bindkey "^[^[[C" forward-word # option/alt + right arrow
 
 eval "$(direnv hook zsh)"
+
+alias gdto="git difftool"
