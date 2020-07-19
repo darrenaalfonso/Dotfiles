@@ -110,6 +110,16 @@ set omnifunc=syntaxcomplete#Complete
 " Pressing "gd" goes to definition of function (opens in a new tab)
 nnoremap gd :tab split \| YcmCompleter GoToDefinition<CR>
 
+" Map CTRL + P to CtrlP search
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
+" CtrlP - open files in new tab on selection
+let g:ctrlp_prompt_mappings = {
+    \ 'AcceptSelection("e")': ['<2-LeftMouse>'],
+    \ 'AcceptSelection("t")': ['<cr>'],
+    \ }
+
 
 " PYTHON SYNTAX ----------
 
@@ -145,7 +155,7 @@ autocmd VimEnter * wincmd p
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 
-"QUESTIONABLE LINES---------------------------
+" DEPRECATED ----------
 
 ""Search
 "autocmd StdinReadPre * let s:std_in=1
@@ -159,9 +169,6 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " let g:jedi#use_tabs_not_buffers = 1
 "let g:jedi#use_splits_not_buffers = "right"
 
-" Set marks to save in a file upon reopen.  Doesn't work though
-" :set viminfo='1000,f1
-
 " Enter in normal mode adds empty lines
 " nmap <S-Enter> O<Esc>
 " nmap <CR> o<Esc>
@@ -170,10 +177,10 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 "" SideSearch current word and return to original window
 "nnoremap <Leader>ss :SideSearch <C-r><C-w><CR> | wincmd p
 
-"" Create a shorter `SS` command
+"" SideSearch - Create a shorter `SS` command
 "command! -complete=file -nargs=+ SS execute 'SideSearch <args>'
 
-"" or command abbreviation
+"" SideSearch -- command abbreviation
 "cabbrev SS SideSearch
 
 " Disabled on 07/18/2020 Now using ":Ag" for search
