@@ -49,6 +49,9 @@ Plugin 'ycm-core/YouCompleteMe'
 " Better Python syntax highlighting
 Plugin 'hdima/python-syntax'
 
+" Faster changing of surround characters ()""'' etc.
+Plugin 'tpope/vim-surround'
+
 " Disabled on 07/18/2020 Now using ":Ag" for search
 " :SideSearch to search
 " Plugin 'ddrscott/vim-side-search'
