@@ -2,7 +2,7 @@
 inoremap jk <esc>
 " inoremap kj <esc>
 " vnoremap kj <esc>
-vnoremap jk <esc> 
+vnoremap jk <esc>
 
 "Enter and shift enter add blank lines
 "nmap <S-Enter> O<Esc>

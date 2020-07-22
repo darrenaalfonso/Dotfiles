@@ -9,10 +9,12 @@ module.exports = {
         /.*\.spotify.com$/,
         "news.ycombinator.com",
 	"youtu.be",
+	"smile.amazon.com",
       ]),
       //browser: "Firefox"
       //browser: "Google Chrome Canary"
-      browser: "Microsoft Edge Canary"
+      //browser: "Microsoft Edge Canary"
+      browser: "Microsoft Edge"
     },
   ]
 };

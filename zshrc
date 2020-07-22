@@ -9,6 +9,7 @@ export ZSH="/Users/darrenalfonso/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
+# ZSH_THEME="lambda"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -77,7 +78,7 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -102,11 +103,11 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 alias ll='ls -al'
 
-export CLICOLOR=1
-export LSCOLORS=GxFxCxDxBxegedabagaced
+# export CLICOLOR=1
+# export LSCOLORS=GxFxCxDxBxegedabagaced
 
-autoload -U colors && colors
-PS1="%{$fg[green]%}%n@%m%{$reset_color%}:%{$fg[cyan]%}%1~%{$reset_color%} %% "
+# autoload -U colors && colors
+# PS1="%{$fg[green]%}%n@%m%{$reset_color%}:%{$fg[cyan]%}%1~%{$reset_color%} %% "
 
 function listsecrets() {
     aws ssm get-parameters-by-path --recursive --path $@ \
@@ -131,4 +132,9 @@ bindkey "^[^[[C" forward-word # option/alt + right arrow
 
 eval "$(direnv hook zsh)"
 
+setopt prompt_subst
+
 alias gdto="git difftool"
+
+GPG_TTY=$(tty)
+export GPG_TTY
