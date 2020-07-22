@@ -10,6 +10,7 @@ module.exports = {
         "news.ycombinator.com",
 	"youtu.be",
 	"smile.amazon.com",
+	"streamable.com",
       ]),
       //browser: "Firefox"
       //browser: "Google Chrome Canary"
