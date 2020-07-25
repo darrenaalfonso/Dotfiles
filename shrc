@@ -1,0 +1,27 @@
+
+
+function zoomon() {
+    sudo pmset -b disablesleep 1
+}
+
+function zoomoff() {
+    sudo pmset -b disablesleep 0
+}
+
+function resetaudio() {
+    sudo kill -9 `ps ax | grep 'coreaudio[a-z]' | awk '{print $1}'`
+}
+
+bindkey "^[^[[D" backward-word # option/alt + left arrow 
+bindkey "^[^[[C" forward-word # option/alt + right arrow
+
+alias gdto="git difftool"
+
+if [ -f ~/.docker_aliases ]; then
+   source ~/.docker_aliases
+fi
+
+GPG_TTY=$(tty)
+export GPG_TTY
+
+
