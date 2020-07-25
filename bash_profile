@@ -1,31 +1,41 @@
 
-# Git branch bash completion
+# Setting PATH for Python 3.5
+# The orginal version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.5/bin:${PATH}"
+export PATH
+
+##
+# Your previous /Users/Darren/.bash_profile file was backed up as /Users/Darren/.bash_profile.macports-saved_2015-11-23_at_22:27:23
+##
+
+# MacPorts Installer addition on 2015-11-23_at_22:27:23: adding an appropriate PATH variable for use with MacPorts.
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+# Finished adapting your PATH environment variable for use with MacPorts.
+
+alias python='python3'
+# Setting PATH for Python 3.5
+# The orginal version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.5/bin:${PATH}"
+export PATH
+
+# Setting PATH for Python 3.6
+# The original version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
+export PATH
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/Darren/google-cloud-sdk/path.bash.inc' ]; then . '/Users/Darren/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/Darren/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/Darren/google-cloud-sdk/completion.bash.inc'; fi
+
+# The next line enables shell command completion for git branches
 if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
-  
-  # Add git completion to aliases
-  __git_complete g __git_main
-  __git_complete gch _git_checkout
-  __git_complete gm _git_merge
-  __git_complete gp _git_pull
-  __git_complete gf _git_fetch
-  __git_complete ga _git_add
-  __git_complete gco _git_commit
-  __git_complete gpo _git_push
 fi
 
-# Make sure you actually have those aliases defined, of course.
-alias g="git"
-alias gch="git checkout"
-alias gm="git merge"
-alias gp="git pull"
-alias gf="git fetch"
-alias ga="git add"
-alias gco="git commit"
-alias gpo="git push origin"
+export PATH="/Applications/Postgres.app/Contents/Versions/9.5/bin:$PATH"
 
-function listsecrets() {
-    aws ssm get-parameters-by-path --recursive --path $@ \
-        --output table \
-        --query 'Parameters[].[Name,Value]'
-}
+export PATH="/Users/Darren/Desktop/Coding_Interview:$PATH"
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
