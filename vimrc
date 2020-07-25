@@ -72,13 +72,13 @@ set backspace=indent,eol,start
 
 "Press jk at same time to escape insert mode
 inoremap jk <esc>
-vnoremap jk <esc> 
+vnoremap jk <esc>
 
 "always show line numbers
 :set number
 :set relativenumber
 
-" Navigate between splits 
+" Navigate between splits
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
@@ -152,7 +152,7 @@ set rtp+=~/.vim/bundle/nerdtree
 autocmd VimEnter * NERDTree
 
 "Focuses on editor window after NERDTree starts
-autocmd VimEnter * wincmd p 
+autocmd VimEnter * wincmd p
 
 "Closes NERDTree if all editor windows are closed
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
