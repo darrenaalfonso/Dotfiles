@@ -9,6 +9,7 @@ export ZSH="/Users/darrenalfonso/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
+# ZSH_THEME="lambda"
 
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
@@ -62,9 +63,6 @@ if [ -f ~/.work_aliases ]]; then
    . .work_aliases
 fi
 
-
-GPG_TTY=$(tty)
-export GPG_TTY
 
 
 # Set list of themes to pick from when loading at random
@@ -147,3 +145,45 @@ export LANG=en_US.UTF-8
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+<<<<<<< HEAD
+=======
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+alias ll='ls -al'
+
+# export CLICOLOR=1
+# export LSCOLORS=GxFxCxDxBxegedabagaced
+
+# autoload -U colors && colors
+# PS1="%{$fg[green]%}%n@%m%{$reset_color%}:%{$fg[cyan]%}%1~%{$reset_color%} %% "
+
+function listsecrets() {
+    aws ssm get-parameters-by-path --recursive --path $@ \
+        --output table \
+        --query 'Parameters[].[Name,Value]'
+}
+
+function zoomon() {
+    sudo pmset -b disablesleep 1
+}
+
+function zoomoff() {
+    sudo pmset -b disablesleep 0
+}
+
+function resetaudio() {
+    sudo kill -9 `ps ax | grep 'coreaudio[a-z]' | awk '{print $1}'`
+}
+
+bindkey "^[^[[D" backward-word # option/alt + left arrow 
+bindkey "^[^[[C" forward-word # option/alt + right arrow
+
+eval "$(direnv hook zsh)"
+
+setopt prompt_subst
+
+alias gdto="git difftool"
+
+GPG_TTY=$(tty)
+export GPG_TTY
+>>>>>>> b331366e45e246e523658cf988ac7426e7f053bf
