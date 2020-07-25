@@ -10,6 +10,60 @@ export ZSH="/Users/darrenalfonso/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
 
+# Which plugins would you like to load?
+# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git)
+
+source $ZSH/oh-my-zsh.sh
+
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+alias ll='ls -al'
+
+export CLICOLOR=1
+export LSCOLORS=GxFxCxDxBxegedabagaced
+
+autoload -U colors && colors
+PS1="%{$fg[green]%}%n@%m%{$reset_color%}:%{$fg[cyan]%}%1~%{$reset_color%} %% "
+
+function listsecrets() {
+    aws ssm get-parameters-by-path --recursive --path $@ \
+        --output table \
+        --query 'Parameters[].[Name,Value]'
+}
+
+function zoomon() {
+    sudo pmset -b disablesleep 1
+}
+
+function zoomoff() {
+    sudo pmset -b disablesleep 0
+}
+
+function resetaudio() {
+    sudo kill -9 `ps ax | grep 'coreaudio[a-z]' | awk '{print $1}'`
+}
+
+bindkey "^[^[[D" backward-word # option/alt + left arrow 
+bindkey "^[^[[C" forward-word # option/alt + right arrow
+
+eval "$(direnv hook zsh)"
+
+alias gdto="git difftool"
+
+if [ -f ~/.docker_aliases ]]; then
+   . .docker_aliases
+fi
+
+if [ -f ~/.work_aliases ]]; then
+   . .work_aliases
+fi
+
+
+
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
@@ -63,14 +117,6 @@ ZSH_THEME="robbyrussell"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-# Which plugins would you like to load?
-# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
-
-source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -98,37 +144,3 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-
-alias ll='ls -al'
-
-export CLICOLOR=1
-export LSCOLORS=GxFxCxDxBxegedabagaced
-
-autoload -U colors && colors
-PS1="%{$fg[green]%}%n@%m%{$reset_color%}:%{$fg[cyan]%}%1~%{$reset_color%} %% "
-
-function listsecrets() {
-    aws ssm get-parameters-by-path --recursive --path $@ \
-        --output table \
-        --query 'Parameters[].[Name,Value]'
-}
-
-function zoomon() {
-    sudo pmset -b disablesleep 1
-}
-
-function zoomoff() {
-    sudo pmset -b disablesleep 0
-}
-
-function resetaudio() {
-    sudo kill -9 `ps ax | grep 'coreaudio[a-z]' | awk '{print $1}'`
-}
-
-bindkey "^[^[[D" backward-word # option/alt + left arrow 
-bindkey "^[^[[C" forward-word # option/alt + right arrow
-
-eval "$(direnv hook zsh)"
-
-alias gdto="git difftool"
