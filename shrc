@@ -1,5 +1,4 @@
 
-
 function zoomon() {
     sudo pmset -b disablesleep 1
 }
@@ -24,4 +23,7 @@ fi
 GPG_TTY=$(tty)
 export GPG_TTY
 
-
+# Archives, tags, deletes branches that start with "ch"
+function charchive() {
+    git branch | grep '^[^A-Za-z0-9]*ch'| awk '{original=$1; sub("ch","archive/ch"); print $1, original}' | xargs -n 2 git tag && git branch --list 'ch*' | xargs git branch -D
+}
