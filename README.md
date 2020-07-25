@@ -1,6 +1,9 @@
 # Dotfiles
 Use the dotfiles!
 
+## PyCharm
+- Can use settings sync within PyCharm for keybindings, window preferences, etc.
+
 ## Other settings for new Macs:
 
 ### Open new windows in tabs (useful in mergetools with popups)
