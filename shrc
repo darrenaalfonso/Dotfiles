@@ -27,3 +27,10 @@ export GPG_TTY
 function charchive() {
     git branch | grep '^[^A-Za-z0-9]*ch'| awk '{original=$1; sub("ch","archive/ch"); print $1, original}' | xargs -n 2 git tag && git branch --list 'ch*' | xargs git branch -D
 }
+
+# Which plugins would you like to load?
+# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git docker-compose safe-paste)
