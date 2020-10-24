@@ -29,7 +29,7 @@ set multiple-cursors
 set commentary
 set ReplaceWithRegister
 
-set number relativenumber
+" set number relativenumber
 
 augroup numbertoggle
     autocmd!
