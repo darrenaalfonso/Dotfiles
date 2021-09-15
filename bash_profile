@@ -39,3 +39,10 @@ export PATH="/Applications/Postgres.app/Contents/Versions/9.5/bin:$PATH"
 export PATH="/Users/Darren/Desktop/Coding_Interview:$PATH"
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
+
+export PATH="$HOME/.poetry/bin:$PATH"
+
+set -o vi
+put -o vi
+
+. "$HOME/.cargo/env"

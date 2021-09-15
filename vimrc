@@ -111,7 +111,7 @@ set omnifunc=syntaxcomplete#Complete
 
 " YCM Shortcuts
 " Pressing "gd" goes to definition of function (opens in a new tab)
-nnoremap gd :tab split \| YcmCompleter GoToDefinition<CR>
+nnoremap gd :vsplit \| YcmCompleter GoToDefinition<CR>
 
 " Map CTRL + P to CtrlP search
 let g:ctrlp_map = '<c-p>'

@@ -11,6 +11,10 @@ module.exports = {
 	"youtu.be",
 	"smile.amazon.com",
 	"streamable.com",
+	// "linkedin.com",
+        // /.*\.linkedin.com$/,
+	"reddit.com",
+        /.*\.reddit.com$/,
       ]),
       //browser: "Firefox"
       //browser: "Google Chrome Canary"
