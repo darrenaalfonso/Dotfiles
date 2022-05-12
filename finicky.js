@@ -16,10 +16,10 @@ module.exports = {
 	"reddit.com",
         /.*\.reddit.com$/,
       ]),
-      //browser: "Firefox"
+      browser: "Firefox"
       //browser: "Google Chrome Canary"
       //browser: "Microsoft Edge Canary"
-      browser: "Microsoft Edge"
+      //browser: "Microsoft Edge"
     },
   ]
 };
