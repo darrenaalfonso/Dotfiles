@@ -6,17 +6,6 @@
 ## BetterSnapTool
 See bettersnaptool-keybindings.png
 
-## Displays
-### Install displayplacer
-Automatically set external display placement
-- `brew tap jakehilborn/jakehilborn && brew install displayplacer`
-- [https://github.com/jakehilborn/displayplacer](https://github.com/jakehilborn/displayplacer)
-
-### Open new windows in tabs (useful in mergetools with popups)
-- On your Mac, choose Apple menu  > System Preferences, then click Dock.
-- Click the “Prefer tabs when opening documents” pop-up menu, then choose an option:
-- Always
-
 ## Vim
 - Run `brew install vim`
 - Install compilers by running `brew install cmake python go nodejs`
@@ -33,6 +22,28 @@ Automatically set external display placement
 ## DiffMerge
 - [https://sourcegear.com/diffmerge/downloads.html](https://sourcegear.com/diffmerge/downloads.html)
 - [Set diffmerge as merge tool](https://sourcegear.com/diffmerge/webhelp/sec__git__mac.html)
+
+## Vimium
+Chrome extension to use Vim keybindings when browsing web
+- Keybindings:
+```text
+map <c-f> scrollFullPageDown
+map <c-b> scrollFullPageUp
+map <c-d> scrollPageDown
+map <c-u> scrollPageUp
+map ZZ removeTab
+```
+
+## Display
+### Install displayplacer
+Automatically set external display placement
+- `brew tap jakehilborn/jakehilborn && brew install displayplacer`
+- [https://github.com/jakehilborn/displayplacer](https://github.com/jakehilborn/displayplacer)
+
+### Open new windows in tabs (useful in mergetools with popups)
+- On your Mac, choose Apple menu  > System Preferences, then click Dock.
+- Click the “Prefer tabs when opening documents” pop-up menu, then choose an option:
+- Always
 
 ## Other productivity apps 
 - AltTab
