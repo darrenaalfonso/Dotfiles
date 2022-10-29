@@ -1,7 +1,7 @@
 # Dotfiles and Dev Machine Settings
 
 ## PyCharm
-- Run `defaults write -g ApplePressAndHoldEnabled -bool false` to be able to navigate quickly with j and k using Vim keybindings
+- Run `defaults write -g ApplePressAndHoldEnabled -bool false` to allow holding down to repeat a key.  This allows you to navigate quickly with j and k using Vim keybindings.
 - Can use settings sync within PyCharm for keybindings, window preferences, etc.
 
 ## BetterSnapTool
