@@ -16,8 +16,8 @@ module.exports = {
 	"reddit.com",
         /.*\.reddit.com$/,
       ]),
-      browser: "Firefox"
-      //browser: "Google Chrome Canary"
+      browser: "Google Chrome Beta"
+      //browser: "Firefox"
       //browser: "Microsoft Edge Canary"
       //browser: "Microsoft Edge"
     },
