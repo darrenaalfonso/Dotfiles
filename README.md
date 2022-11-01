@@ -31,6 +31,11 @@ Automatically set external display placement
 - `brew install direnv`
 - Install autocompletion `brew install bash-completion`
 
+## .zshrc
+- The .zshrc file should be specific to the machine, thus there isn't one in this repo
+- The .shrc file can be shared between machines
+- To source the .shrc file from the .zshrc file, add `source ~/.shrc` into the .zshrc file
+
 ## DiffMerge
 - [https://sourcegear.com/diffmerge/downloads.html](https://sourcegear.com/diffmerge/downloads.html)
 - [Set diffmerge as merge tool](https://sourcegear.com/diffmerge/webhelp/sec__git__mac.html)
