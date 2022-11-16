@@ -1,0 +1,1 @@
+/opt/homebrew/Cellar/displayplacer/1.2.0/bin/displayplacer list | tail -n1 | sed 's/displayplacer //;s/id:\(.\{36\}\) res:\([0-9x]\{7,9\}\) \(.*\)id:\(.\{36\}\) res:\2/id:\4 res:\2 \3id:\1 res:\2/g' | xargs /opt/homebrew/Cellar/displayplacer/1.2.0/bin/displayplacer

@@ -15,6 +15,7 @@ module.exports = {
         // /.*\.linkedin.com$/,
 	"reddit.com",
         /.*\.reddit.com$/,
+	"freedom.to"
       ]),
       browser: "Google Chrome Beta"
       //browser: "Firefox"
