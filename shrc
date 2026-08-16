@@ -15,6 +15,7 @@ bindkey "^[^[[C" forward-word # option/alt + right arrow
 
 alias gdto="git difftool"
 alias ga="git add"
+alias gc="git commit"
 
 if [ -f ~/.docker_aliases ]; then
    source ~/.docker_aliases
